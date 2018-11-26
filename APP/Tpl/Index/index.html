@@ -10,17 +10,17 @@
   <title>泾川县纪念改革开放40周年</title>
   <link rel="stylesheet" href="__PUBLIC__/Css/index.css" />
   <style type="text/css">
-  body {
+body{
   margin:0px;
-  padding: 0px;
-  width:1400px;
-  height:750px;
+  padding:0px;
+  /*width:100%;*/
+  height:100%;
+  overflow: hidden;
   background:url(__PUBLIC__/Img/bg.jpg) no-repeat;
-  background-size:100% auto;
+  background-size:cover;
   background-position: center top;
-  text-align:center;
 }
-.main{
+.tool{
   height:118px;
   width:1200px;
   border:2px solid #E4D2AE;
@@ -30,7 +30,6 @@
   top:75%;
   left: 0;
   right: 0;
-
   padding:5px;
   background-color: #E5D3AF;
   text-align: center;
@@ -41,27 +40,30 @@
     padding: 0px 0px;
     display: inline-block;
     border-radius: 4px;
-    border:1px solid #ccc;
     margin-top:3px;
   }
+
   .word{
     display: inline-block;
     width: 140px;
     height: 82px;
     font-size:11px; 
-    margin-top:2px; 
+    margin-top:1px; 
   }
   img{
     width: 138px;
     height: 82px;
-    border:2px solid #eee;
+    border:3px solid #eee;
     border-radius: 4px;
+  }
+  img:hover{
+    border:3px solid #D2A56C;
   }
   </style>
 </head>
 
 <body>
-    <div class="main">
+    <div class="tool">
         <span class="thumb">
           <a href="#" class="thumbnail" title="党的建设篇">
             <img src="__IMAGES__/index/1.jpg" alt="党的建设篇" class="thumbimges">
