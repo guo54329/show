@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>泾川县纪念改革开放40周年</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/htmleaf-demo.min.css">
+	<!--[if lt IE 9]>
+      <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+      <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<div class="htmleaf-container">
+	<!--顶部-->
+		<div class="htmleaf-container--header">
+			<h1>泾川县纪念改革开放40周年</h1>
+		</div>
+	<!--中间-->	
+		<div class="htmleaf--main">
+			<div class="htmleaf-container--side mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar" style="position: relative; overflow: visible;">
+				<div id="mCSB_1" class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside" tabindex="0">
+					
+						<!--相关插件-->
+						<style>
+						.htmleaf-related h1{display:block;border-bottom:2px solid gray;padding-bottom:16px;font-size:2em;font-weight:600;text-align:center;}
+						.htmleaf-related a{display:block;border-bottom:1px solid gray;padding-bottom:11px;}
+						.htmleaf-related a>h3{font-size:1.2em;font-weight:600;}
+						</style>
+						<div class="htmleaf-related">
+							<h1>导　航</h1>
+							<!-- <a href="first.html" target="content" style="padding-top:10px;"><h3>前言</h3></a> -->
+							<foreach name="cate" item="v">
+							<a href="content.html?cid={$v.id}" target="content"><h3>{$v.num}：{$v.title}</h3></a>
+							</foreach>
+							<!-- <a href="first.html" target="content"><h3>结束</h3></a> -->
+							<a  style="border:0px;margin-top:50px;text-align:center;font-size:1em;"><h3>泾川县网信办宣</h3></a>
+							<a  style="border:0px;margin-top:50px;text-align:center;font-size:1em;"><h3>推荐使用谷歌浏览器</h3></a>
+						</div>
+						
+					<!--</div>-->
+				</div>
+			</div>
+			<!--图片显示区域-->
+			<div class="htmleaf-container--content">
+			  <if condition="$url neq ''">
+				<iframe src="{$url}" id="iframe" height="737px" width="100%" name="content"></iframe>
+			  <else/>
+				<iframe src="content.html?cid=1" id="iframe" height="737px" width="100%" name="content"></iframe>
+			  </if>
+			</div>
+		</div><!--中间结束-->	
+	
+		
+	</div><!--最外结束-->
+	<script src="__PUBLIC__/js/htmleaf-demo.min.js"></script>
+	<script type="text/javascript">
+		$(".htmleaf-container--side").mCustomScrollbar({
+			theme:"minimal"
+		});
+	</script>
+</body></html>

@@ -4,8 +4,8 @@ return array(
 	'DB_HOST' => '127.0.0.1',
 	'DB_USER' => 'root',
 	'DB_PWD' => 'root',
-	'DB_NAME' => 'aisen',
-	'DB_PREFIX' => 'ask_',
+	'DB_NAME' => 'show',
+	'DB_PREFIX' => 'show_',
 
 	//指定后台下的Tpl下的Public文件夹位置
 	'TMPL_PARSE_STRING' => array(
@@ -25,15 +25,12 @@ return array(
     'URL_MODEL'=>2,   //1为标准默认模式，即地址里面含有入口文件，2为去掉了入口文件。0为普通模式，即一般的网页访问模式（含有入口文件）。
 
     'URL_ROUTER_ON'=>ture, //开启路由
-	'URL_ROUTE_RULES' => array( //定义路由规则
+	'URL_ROUTE_RULES'=> array( //定义路由规则
 		'index'     => 'Index/index',
-		'calculate'     => 'Index/calculate',
-		'result'    => 'Index/result',
-		'verify'    => 'Index/verify',
-		'modify'    => 'Index/modify',
-		'search'    => 'Index/search',
-		'deleteselect'    => 'Index/deleteselect',
-		'deleteall' => 'Index/deleteall'
+		'saveid'    => 'Index/saveid',
+		'navigator' => 'Index/navigator',
+		'content'   => 'Index/content'
+		
 	)
 );
 ?>
