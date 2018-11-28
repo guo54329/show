@@ -47,13 +47,7 @@ body, html { font-size: 100%; 	padding: 0; margin: 0;}
 ul li{
 	list-style: none;
 }
-body{
-	background: #494A5F;
-	color: #D5D6E2;
-	font-weight: 500;
-	font-size: 1.05em;
-	font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
-}
+
 .htmleaf-links a{ color: rgba(255, 255, 255, 0.6);outline: none;text-decoration: none;-webkit-transition: 0.2s;transition: 0.2s;}
 .htmleaf-links a:hover,.htmleaf-links a:focus{color:#74777b;text-decoration: none;}
 .htmleaf-container{
@@ -73,20 +67,7 @@ body{
 .bgcolor-11{ background: #3755ad; color: #fff;}/*dark blue*/
 .bgcolor-12{ background: #3498DB; color: #fff;}/*light blue*/
 .bgcolor-20{ background: #494A5F;color: #D5D6E2;}
-/* Header */
-.htmleaf-header{
-	padding: 0.5em 80px 0.5em;
-	letter-spacing: -1px;
-	text-align: center;
-	background: #66677c;
-}
-.htmleaf-header h1 {
-	color: #D5D6E2;
-	font-weight: 600;
-	font-size: 2em;
-	line-height: 1;
-	/*margin-bottom: 0;*/
-}
+
 
 /*nav*/
 .htmleaf-demo a{color: #fff;text-decoration: none;}
@@ -169,7 +150,7 @@ body{
 .related a {
 	display: inline-block;
 	text-align: left;
-	/*margin: 10px auto;*/
+	margin: 10px auto;
 	padding: 5px 20px;
 	padding-bottom:10px;
 	opacity: 0.8;
@@ -252,4 +233,4 @@ body{
 	.related a h3 {
 		font-size: 0.6em;
 	}
-}
+}*/

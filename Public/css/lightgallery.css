@@ -266,7 +266,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-outer .lg-thumb-outer {
-  background-color: #0D0A0A;
+  /*background-color: #e5d3af;*//*#0D0A0A*/
+  background-color:rgba(255,255,255,0.2);
   bottom: 0;
   position: absolute;
   width: 100%;
@@ -897,7 +898,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   right: 0;
   bottom: 0;
   z-index: 1040;
-  background-color: #000;
+  /*background-color: #E5D3B3;*/ /*#000*/
+  background-color:rgba(255,255,255,0.2);
   opacity: 0;
   -webkit-transition: opacity 0.15s ease 0s;
   -o-transition: opacity 0.15s ease 0s;

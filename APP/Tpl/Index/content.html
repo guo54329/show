@@ -9,14 +9,47 @@
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/htmleaf-demo.css"><!--演示页面样式，使用时可以不引用-->
 	<!--插件 下面一个文件-->
 	<link href="__PUBLIC__/Css/lightgallery.css" rel="stylesheet">
+	<style type="text/css">
+	body{
+	  margin:0px;
+	  padding:0px;
+	  height:100%;
+	  overflow: hidden;
+	  background:url(__PUBLIC__/img/right.jpg) no-repeat;
+	  background-size:cover;
+	  background-position: center top;
+}
+.htmleaf-container .title{
+	font-size: 22px;
+	color: red;
+	height: 50px !important;
+	line-height: 50px;
+	text-align: center;
+	border-bottom: 1px solid #D5D6E2;
+}
+.demo-gallery .desc{
+	margin:0 auto;
+	text-align: left;
+	width:60%;padding-top:10px;
+}
+.demo-gallery .desc p{
+
+	text-indent: 2em;
+	line-height: 34px;
+	font-size: 18px;
+}
+</style>
 </head>
 <body>
 	<div class="htmleaf-container">
-		<header class="htmleaf-header">
-			<h1>{$cate.num}：{$cate.title}</h1>
-		</header>
+		<div class="title">
+			<span class="word">{$cate.url}</span>
+		</div>
 		<div class="demo-gallery">
-	            <ul id="lightgallery" class="list-unstyled row">
+		    <if condition="$cate['id'] eq 9"><div class="desc">{$cate.desc}</div></if>
+			<if condition="$cate['id'] eq 10"><div class="desc">{$cate.desc}</div></if>
+			<if condition="$cate['id'] neq 9 AND $cata['id'] neq 10">
+				<ul id="lightgallery" class="list-unstyled row">
 	                <foreach name="picture" item="v">
 	                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="__IMAGES__/{$cate.id}{$cate.pyjx}/thumb-{$v.name}.jpg 375, __IMAGES__/{$cate.id}{$cate.pyjx}/thumb-{$v.name}.jpg 480, __IMAGES__/{$cate.id}{$cate.pyjx}/thumb-{$v.name}.jpg 800" data-src="__IMAGES__/{$cate.id}{$cate.pyjx}/{$v.name}.jpg" data-sub-html="<h4>{$cate.title}</h4><p>{$v.desc}</p>">
 	                    <a href="">
@@ -24,20 +57,11 @@
 	                    </a>
 	                </li>
 	                </foreach>
-	               
 	            </ul>
-	        </div>
-		
-		<div class="related">
-		    
-		    <a href="0.html">
-			  <h3>序言</h3>
-			</a>
-			<a href="2.html">
-			  <h3>第二篇：百舸争流</h3>
-			</a>
-		</div>
-		
+		    </if>
+
+            
+        </div>
 	</div>
 	<!--插件 下面两个文件-->
 	<script src="__PUBLIC__/Js/jquery-1.11.0.min.js" type="text/javascript"></script>

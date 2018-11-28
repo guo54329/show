@@ -24,51 +24,50 @@ body{
 .tool{
   height:120px;
   width:1200px;
-  border:2px solid #E4D2AE;
-  border-radius:8px;
   margin:auto;
   position: absolute;
-  top:78%;
+  top:70%;
   left: 0;
   right: 0;
   padding:5px;
-  background-color: #E5D3AF;
   text-align: center;
 }
-  .thumb{
-    width: 140px;
-    height: 84px;
-    padding: 0px;
-    display: inline-block;
-    border-radius: 4px;
-    margin-top:5px;
-  }
-
-  .word{
-    display: inline-block;
-    width: 140px;
-    height: 82px;
-    font-size:11px; 
-    margin-top:1px; 
-  }
-  img{
-    width: 138px;
-    height: 82px;
-    border:2px solid #eee;
-    border-radius: 4px;
-    transition: All 0.1s ease-in-out;
-    -webkit-transition: All 0.1s ease-in-out;
-    -moz-transition: All 0.1s ease-in-out;
-    -o-transition: All 0.1s ease-in-out;
-  }
-  img:hover{
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-  }
-  </style>
+.thumb{
+  display: inline-block;
+  width: 120px; 
+  height: 40px;
+  transform:skew(-40deg);
+  -webkit-transform: skew(-40deg);
+  -moz-transform: skew(-40deg);
+  -o-transform:skew(-40deg);
+  -ms-transform:skew(-40deg); 
+  background-color:#C5835C;
+  background-color:(200,130,100,0.8);
+  margin-left:10px;
+}
+.thumb .word{
+  width: 118px;
+  height: 38px;
+  display: inline-block;
+  line-height: 38px;
+  transform:skew(40deg);
+  -webkit-transform: skew(40deg);
+  -moz-transform: skew(40deg);
+  -o-transform:skew(40deg);
+  -ms-transform:skew(40deg); 
+  color:#AD221C;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 黑体;
+}
+.div1{
+  margin-left: -100px;
+}
+.div2{
+  margin-top: 11px;
+  margin-left: 90px;
+}
+</style>
   <script type="text/javascript">
   function jupmurl(id){
     var url="saveid.html";
@@ -85,14 +84,60 @@ body{
 
 <body>
     <div class="tool">
-    <foreach name="cate" item="v">
-        <span class="thumb" title="{$v.title}">
-          <a href="javascript:;" class="thumbnail" onclick="jupmurl({$v.id});">
-            <img src="__IMAGES__/{$v.url}" class="thumbimges">
-          </a>
-          <span class="word">{$v.title}</span>
-        </span>&nbsp;
-    </foreach>
+      <div class="div1">
+        <span class="thumb" title="前 言">
+              <a href="javascript:;" class="thumbnail" onclick="jupmurl(9);">
+               <span class="word">前 言</span>
+              </a>
+        </span>
+        <span class="thumb" title="党的建设篇">
+              <a href="javascript:;" class="thumbnail" onclick="jupmurl(1);">
+               <span class="word">党的建设篇</span>
+              </a>
+        </span>
+        <span class="thumb" title="城乡建设篇">
+              <a href="javascript:;" class="thumbnail" onclick="jupmurl(2);">
+               <span class="word">城乡建设篇</span>
+              </a>
+        </span>
+        <span class="thumb" title="工业经济篇">
+              <a href="javascript:;" class="thumbnail" onclick="jupmurl(3);">
+              <span class="word">工业经济篇</span>
+              </a>
+        </span>
+        <span class="thumb" title="美丽乡村篇">
+              <a href="javascript:;" class="thumbnail" onclick="jupmurl(4);">
+               <span class="word">美丽乡村篇</span>
+              </a>
+        </span>
+      </div>
+      <div  class="div2">
+        <span class="thumb" title="生态环境篇">
+              <a href="javascript:;" class="thumbnail" onclick="jupmurl(5);">
+               <span class="word">生态环境篇</span>
+              </a>
+        </span>
+        <span class="thumb" title="文化旅游篇">
+              <a href="javascript:;" class="thumbnail" onclick="jupmurl(6);">
+               <span class="word">文化旅游篇</span>
+              </a>
+        </span>
+        <span class="thumb" title="民生事业篇">
+              <a href="javascript:;" class="thumbnail" onclick="jupmurl(7);">
+               <span class="word">民生事业篇</span>
+              </a>
+        </span>
+        <span class="thumb" title="百姓生活篇">
+              <a href="javascript:;" class="thumbnail" onclick="jupmurl(8);">
+              <span class="word">百姓生活篇</span>
+              </a>
+        </span>
+        <span class="thumb" title="结束语">
+              <a href="javascript:;" class="thumbnail" onclick="jupmurl(10);">
+               <span class="word">结束语</span>
+              </a>
+        </span>
+      </div>
     </div>
 </body>
 
