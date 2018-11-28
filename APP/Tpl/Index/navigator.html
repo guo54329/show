@@ -31,12 +31,12 @@ body{
 }
 /*顶部标题*/
 .htmleaf-container--header{
-	height: 68px;
+	height: 65px;
 }
 .htmleaf-container--header h1{
 	text-align: center;
-	font-size: 30px;
-	padding-top:14px;
+	font-size: 28px;
+	padding-top:15px;
 }
 .toptitle{
 	color: red;
@@ -125,7 +125,7 @@ body{
 		</div>
 	<!--中间-->	
 		<div class="htmleaf--main">
-			<div class="htmleaf-container--side mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar" style="position: relative; overflow: visible;">
+			<div class="htmleaf-container--side mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar"><!--  style="position: relative; overflow: visible;" -->
 				<div  class="left" tabindex="0">
 						<div class="htmleaf-related">
 							<a href="content.html?cid=9" target="content" class="first"><h3>前 言</h3></a>
@@ -144,7 +144,7 @@ body{
 			<!--图片显示区域-->
 			<div class="htmleaf-container--content">
 			  <if condition="$url neq ''">
-				<iframe src="{$url}" id="iframe" height="737px" width="100%" name="content"></iframe>
+				<iframe src="{$url}" id="iframe" height="737px" width="100%" name="content" scrolling="yes"></iframe>
 			  <else/>
 				<iframe src="content.html?cid=1" id="iframe" height="737px" width="100%" name="content"></iframe>
 			  </if>
@@ -158,5 +158,6 @@ body{
 		$(".htmleaf-container--side").mCustomScrollbar({
 			theme:"minimal"
 		});
+		
 	</script>
 </body></html>

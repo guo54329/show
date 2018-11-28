@@ -31,8 +31,7 @@ class IndexAction extends Action {
 
     public function content($cid){
     	$cate = M('cate')->find($cid);
-    	$picture = M('picture
-    		')->where("cid=$cid")->order('id ASC')->select();
+    	$picture = M('picture')->where("cid=$cid")->order('id ASC')->select();
     	$this->cate=$cate;
     	$this->picture=$picture;
     	$this->display();

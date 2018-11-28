@@ -9,15 +9,17 @@
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/htmleaf-demo.css"><!--演示页面样式，使用时可以不引用-->
 	<!--插件 下面一个文件-->
 	<link href="__PUBLIC__/Css/lightgallery.css" rel="stylesheet">
+
 	<style type="text/css">
-	body{
-	  margin:0px;
-	  padding:0px;
-	  height:100%;
-	  overflow: hidden;
-	  background:url(__PUBLIC__/img/right.jpg) no-repeat;
-	  background-size:cover;
-	  background-position: center top;
+body{
+	margin:0px;
+	padding:0px;
+	height:100%;
+	overflow: hidden;
+	background:url(__PUBLIC__/img/right.jpg) no-repeat;
+	background-size:cover;
+	background-position: center top;
+	overflow-y: scroll;
 }
 .htmleaf-container .title{
 	font-size: 22px;
@@ -33,15 +35,15 @@
 	width:60%;padding-top:10px;
 }
 .demo-gallery .desc p{
-
 	text-indent: 2em;
 	line-height: 34px;
 	font-size: 18px;
 }
+
 </style>
 </head>
 <body>
-	<div class="htmleaf-container">
+	<div class="htmleaf-container mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar">
 		<div class="title">
 			<span class="word">{$cate.url}</span>
 		</div>
@@ -49,27 +51,33 @@
 		    <if condition="$cate['id'] eq 9"><div class="desc">{$cate.desc}</div></if>
 			<if condition="$cate['id'] eq 10"><div class="desc">{$cate.desc}</div></if>
 			<if condition="$cate['id'] neq 9 AND $cata['id'] neq 10">
-				<ul id="lightgallery" class="list-unstyled row">
+			    <div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
+				<ul id="lightgallery" class="list-unstyled row item">
 	                <foreach name="picture" item="v">
-	                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="__IMAGES__/{$cate.id}{$cate.pyjx}/thumb-{$v.name}.jpg 375, __IMAGES__/{$cate.id}{$cate.pyjx}/thumb-{$v.name}.jpg 480, __IMAGES__/{$cate.id}{$cate.pyjx}/thumb-{$v.name}.jpg 800" data-src="__IMAGES__/{$cate.id}{$cate.pyjx}/{$v.name}.jpg" data-sub-html="<h4>{$cate.title}</h4><p>{$v.desc}</p>">
+	                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="__IMAGES__/{$v.cid}/{$v.zid}/thumb_{$v.ptitle}.jpg 375, __IMAGES__/{$v.cid}/{$v.zid}/thumb_{$v.ptitle}.jpg 480, __IMAGES__/{$v.cid}/{$v.zid}/thumb_{$v.ptitle}.jpg 800" data-src="__IMAGES__/{$v.cid}/{$v.zid}/{$v.ptitle}.jpg" data-sub-html="<h4>{$cate.title}</h4><p>{$v.desc}</p>">
 	                    <a href="">
-	                        <img class="img-responsive" src="__IMAGES__/{$cate.id}{$cate.pyjx}/thumb-{$v.name}.jpg">
+	                        <img class="img-responsive" src="__IMAGES__/{$v.cid}/{$v.zid}/thumb_{$v.ptitle}.jpg">
 	                    </a>
 	                </li>
 	                </foreach>
 	            </ul>
-		    </if>
-
-            
+	           
+		    </if> 
         </div>
 	</div>
 	<!--插件 下面两个文件-->
-	<script src="__PUBLIC__/Js/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="__PUBLIC__/js/jquery-1.11.0.min.js" type="text/javascript"></script>
 	<script src="__PUBLIC__/Js/lightgallery-all.min.js"></script>
 	<script type="text/javascript">
         $(document).ready(function(){
             $('#lightgallery').lightGallery();
         });
         </script>
+    <script type="text/javascript">
+		$(".htmleaf-container").mCustomScrollbar({
+			theme:"minimal"
+		});
+	</script>
+
 </body>
 </html>
